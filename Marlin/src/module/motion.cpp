@@ -536,10 +536,11 @@ void restore_feedrate_and_scaling() {
 
   // Software Endstops are based on the configured limits.
   soft_endstops_t soft_endstop = {
+    true, false,
     { X_MIN_POS, Y_MIN_POS, Z_MIN_POS },
-    { X_MAX_POS, Y_MAX_POS, Z_MAX_POS },
-    { true, false }
+    { X_MAX_POS, Y_MAX_POS, Z_MAX_POS }
   };
+
 
   /**
    * Software endstops can be used to monitor the open end of
